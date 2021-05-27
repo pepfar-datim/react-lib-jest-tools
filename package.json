@@ -1,0 +1,42 @@
+{
+  "version": "0.1.9",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "description": "Utilities for simplified JEST/REACT testing",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "docs": "typedoc --plugin typedoc-plugin-markdown src/index.ts"
+  },
+  "name": "@pepfar-react-lib/jest-tools",
+  "author": "jakub-bao",
+  "module": "dist/jest-tools2.esm.js",
+  "devDependencies": {
+    "husky": "^4.3.8",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.1.0",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@types/react": "^17.0.1",
+    "react": "^17.0.1",
+    "typedoc": "^0.20.23",
+    "typedoc-plugin-markdown": "^3.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pepfar-datim/react-lib-jest-tools.git"
+  }
+}
