@@ -1,4 +1,5 @@
 # REACT Test Utils
+**Repo Owner:** Ben Guaraldi [@benguaraldi](https://github.com/benguaraldi)
 
 This super-light library will help you write your REACT tests much more effectively.
 
