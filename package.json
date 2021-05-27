@@ -16,17 +16,13 @@
     "build": "tsdx build",
     "test": "tsdx test",
     "lint": "tsdx lint",
-    "size": "size-limit",
-    "analyze": "size-limit --why",
     "docs": "typedoc --plugin typedoc-plugin-markdown src/index.ts"
   },
-  "name": "@dhis2-app/test-tools",
+  "name": "@pepfar-react-lib/jest-tools",
   "author": "jakub-bao",
-  "module": "dist/test-tools2.esm.js",
+  "module": "dist/jest-tools2.esm.js",
   "devDependencies": {
-    "@size-limit/preset-small-lib": "^4.9.2",
     "husky": "^4.3.8",
-    "size-limit": "^4.9.2",
     "tsdx": "^0.14.1",
     "tslib": "^2.1.0",
     "typescript": "^3.9.7"
@@ -41,6 +37,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dhis2-app/test-tools.git"
+    "url": "https://github.com/pepfar-datim/react-lib-jest-tools.git"
   }
 }

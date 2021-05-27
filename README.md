@@ -9,7 +9,7 @@ Jest is awesome!
 But it can be a bit elaborate to do basic tasks.  
 This library focuses on `REACT` + `Jest` used case and is inspired by super handy `Cypress` commands.
 
-`@dhis2-app/test-tools` should help you write your tests much faster and make them much more readable. Disagree? Submit an issue in our repo!
+`@pepfar-react-lib/jest-tools` should help you write your tests much faster and make them much more readable. Disagree? Submit an issue in our repo!
 
 ### Example:
 
@@ -30,12 +30,12 @@ select(selectId, value);
 
 ## Installation
 ```bash
-npm i @dhis2-app/test-tools
+npm i @pepfar-react-lib/jest-tools
 ```
 
 ## Usage
 ```javascript
-import {select} from "@dhis2-app/test-tools";
+import {select} from "@pepfar-react-lib/jest-tools";
 // your code
 select(selectId,value);
 ```

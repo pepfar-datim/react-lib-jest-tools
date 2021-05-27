@@ -1,6 +1,6 @@
-[@dhis2-app/test-tools](README.md) / Exports
+[@pepfar-react-lib/jest-tools](README.md) / Exports
 
-# @dhis2-app/test-tools
+# @pepfar-react-lib/jest-tools
 
 Test utilities for `REACT`/`Jest`
 
