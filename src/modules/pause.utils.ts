@@ -28,6 +28,6 @@ export function pause(sec:number):Promise<void>{
 export async function loadingDone(sec?:number):Promise<any>{
     let timeout = (sec||15)*1000;
     await pause(0.2);
-    if (!screen.queryByTestId('loading')) return Promise.resolve();
+    if (screen.queryAllByTestId('loading').length===0) return Promise.resolve();
     return waitForElementToBeRemoved(() => screen.queryAllByTestId('loading'),{timeout});
 }
