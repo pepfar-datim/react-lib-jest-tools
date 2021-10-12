@@ -14,3 +14,4 @@ export * from "./modules/text.utils";
 export * from "./modules/textIn.utils";
 export * from "./modules/type.utils";
 export * from "./modules/setupComponent.utils";
+export * from "./modules/clickTest.utils";
