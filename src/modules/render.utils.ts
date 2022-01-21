@@ -1,6 +1,6 @@
 import {render, screen} from "@testing-library/react";
 import {ReactElement} from "react";
-import {loadingDone} from "./pause.utils";
+import {loadingDone, pause} from "./pause.utils";
 import {textsWait} from "./text.utils";
 
 
@@ -9,11 +9,23 @@ import {textsWait} from "./text.utils";
  *
  * @example
  * ```javascript
- * debug()
+ * await debug()
  * ```
  * @category Render
  * */
-export let debug = ()=>screen.debug(null as any,10000000);
+export let debug = ()=>{
+    screen.debug(null as any,10000000);
+}
+
+export let debugWait = async ()=>{
+    await pause(2);
+    screen.debug(null as any,10000000);
+}
+
+export let urlDebug = async ()=>{
+    await pause(2);
+    screen.logTestingPlaygroundURL();
+}
 
 /**
  * Render dynamic component and wait for `texts` to appear

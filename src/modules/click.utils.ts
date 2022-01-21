@@ -1,4 +1,5 @@
 import {fireEvent, screen} from "@testing-library/react";
+import {debug} from "./render.utils";
 
 /**
  * Click element found by `id`
@@ -18,10 +19,28 @@ export function click(id:string){
  *
  * @example
  * ```javascript
- * click('Next page')
+ * clickByText('Next page')
  * ```
  * @category Click
  * */
 export function clickByText(text:string){
     fireEvent.click(screen.getByText(text));
+}
+
+/**
+ * Click element found by a css selector
+ *
+ * @example
+ * ```javascript
+ * clickByCss('.row1 .checkbox')
+ * ```
+ * @category Click
+ * */
+export function clickByCss(css:string){
+    let element = document.querySelector(css);
+    if (!element) {
+        debug();
+        throw new Error(`Cannot find element by css selector: '${css}'`);
+    }
+    fireEvent.click(element);
 }

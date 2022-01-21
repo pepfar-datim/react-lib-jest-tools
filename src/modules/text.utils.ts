@@ -36,7 +36,8 @@ export function texts(texts:string[]):void{
  * @category Text
  * */
 export function noText(text:string):void{
-    expect(screen.queryByText(text)).toBe(null);
+    if (!/[A-z0-9 ]+/.test(text)) throw new Error(`noText only supports [A-z0-9 ]. '${text}' was provided`);
+    expect(screen.queryByText(new RegExp(text))).toBeNull();
 }
 
 /**
@@ -61,7 +62,7 @@ export function noTexts(textsToFind:string[]):void{
  * @category Text
  * */
 export function textWait(text:string):Promise<any>{
-    return screen.findByText(text);
+    return screen.findAllByText(new RegExp(text));
 }
 /**
  * **Wait** until all texts appear in DOM
@@ -72,6 +73,12 @@ export function textWait(text:string):Promise<any>{
  * ```
  * @category Text
  * */
-export function textsWait(textsToFind:string[]):Promise<any>{
-    return waitFor(() => texts(textsToFind),{timeout: 10000});
+export async function textsWait(textsToFind:string[]):Promise<any>{
+    for (const text of textsToFind){
+        await screen.findAllByText(new RegExp(escapeRegExp(text)))
+    }
+}
+
+function escapeRegExp(text) {
+    return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
 }
