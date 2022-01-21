@@ -36,9 +36,9 @@ export let urlDebug = async ()=>{
  * ```
  * @category Render
  * */
-export async function renderComponent(component:ReactElement, texts: string[]):Promise<any>{
+export async function renderComponent(component:ReactElement, texts?: string[]):Promise<any>{
     let main = render(component);
     await loadingDone();
-    await textsWait(texts);
+    if (texts) await textsWait(texts);
     return main;
 }

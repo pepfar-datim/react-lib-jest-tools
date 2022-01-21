@@ -16,4 +16,5 @@ export * from "./modules/type.utils";
 export * from "./modules/setupComponent.utils";
 export * from "./modules/clickTest.utils";
 export * from "./modules/disableLocation.utils";
-export * from "./modules/get.utils"
+export * from "./modules/get.utils";
+export * from "./modules/automatedTest.utils";
