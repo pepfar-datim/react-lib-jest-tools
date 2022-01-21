@@ -34,7 +34,7 @@
     "@testing-library/react": "^11.2.5",
     "@testing-library/jest-dom": "5.14.1",
     "@types/react": "^17.0.1",
-    "@pepfar-react-lib/http-tools": "^0.1.23"
+    "@pepfar-react-lib/http-tools": "^0.1.24"
   },
   "repository": {
     "type": "git",
