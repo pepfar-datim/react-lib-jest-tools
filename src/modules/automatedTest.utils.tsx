@@ -3,6 +3,7 @@ import {registerSendMock, testAs} from "@pepfar-react-lib/http-tools";
 import {renderComponent} from "./render.utils";
 import {click, clickByCss, clickByText} from "./click.utils";
 import {noTexts, textsWait} from "./text.utils";
+import {type} from "./type.utils";
 
 
 
@@ -16,6 +17,10 @@ export type TestAction = {
     expectPost?:{
         url: string;
         body:any;
+    },
+    type?: {
+        where: string;
+        what: string;
     }
 }
 
@@ -32,6 +37,7 @@ async function performTestAction(action:TestAction){
     if (action.click) click(action.click);
     if (action.clickByCss) clickByCss(action.clickByCss);
     if (action.clickByText) clickByText(action.clickByText);
+    if (action.type) type(action.type.where, action.type.what);
     if (action.texts) await textsWait(action.texts);
     if (action.noTexts) await noTexts(action.noTexts);
     if (action.custom) action.custom();
