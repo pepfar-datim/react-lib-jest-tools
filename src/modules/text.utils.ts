@@ -1,4 +1,5 @@
 import {screen, waitFor} from "@testing-library/react";
+import {pause} from "./pause.utils";
 
 /**
  * Check if `text` is present in DOM **right now**

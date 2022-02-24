@@ -48,7 +48,7 @@ async function performTestAction(action:TestAction){
 }
 
 export async function automatedTest({name,component,asUser,actions, preRender, postRender}:TestCase):Promise<void>{
-    test(name, async()=> {
+    // test(name, async()=> {
         testAs(asUser);
         if (preRender) await preRender();
         await renderComponent(component);
@@ -56,5 +56,5 @@ export async function automatedTest({name,component,asUser,actions, preRender, p
         for (const action of actions) {
             await performTestAction(action);
         }
-    });
+    // });
 }
