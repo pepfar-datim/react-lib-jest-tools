@@ -18,3 +18,4 @@ export * from "./modules/clickTest.utils";
 export * from "./modules/disableLocation.utils";
 export * from "./modules/get.utils";
 export * from "./modules/automatedTest.utils";
+export * from "./modules/mock.component"
